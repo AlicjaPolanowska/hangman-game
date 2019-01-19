@@ -29,7 +29,7 @@ public class Animals implements Category {
         animals.add("kangaroo");
         animals.add("ant");
         animals.add("owl");
-        animals.add("ladybird");
+        animals.add("ladybug");
         animals.add("grasshopper");
         animals.add("turtle");
         animals.add("deer");
