@@ -14,13 +14,29 @@ public class Game {
     String actualLetter;
 
     public Game(){
-        liveCount = 5;
+        System.out.println("==============================\nWelcome to Hangman game!\nGame was created by Alicja Polanowska & Marcin Małek\n==============================\n");
+        String choice;
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("Choose difficulty:\nEasy(1)\nNormal(2)\nHard(3)");
+            choice = sc.nextLine();
+        }
+        while(!Arrays.asList(new String[]{"1", "2", "3"}).contains(choice));
+        switch(choice.charAt(0)){
+            case '1': liveCount = 7;
+                break;
+            case '2': liveCount = 5;
+                break;
+            case '3': liveCount = 3;
+                break;
+            default:
+                break;
+        }
         isEnd = false;
         lettersFailed = "";
     }
 
     public void play(){
-        System.out.println("==============================\nWelcome to Hangman game!\nGame was created by Alicja Polanowska & Marcin Małek\n==============================\n");
         chooseCategory();
         getWord();
         getTitle();
